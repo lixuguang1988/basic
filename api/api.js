@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const slimApi = 'http://slim.lixuguang.com/';
+var slimApi = 'http://slim.lixuguang.com/';
 
 export function fetchListData(type, page){
     return axios.get(slimApi + type + "/" + page);

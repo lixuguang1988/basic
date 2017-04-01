@@ -1,6 +1,6 @@
 <template>
-    <main>
-        <div class="wrap user-bar clearfix">
+    <div class="wrap">
+        <div class="user-bar clearfix">
             <div class="user-bar-avatar pull-left">
                 <img  class="img-circle" :src="user ? user.avatar : ''" alt="">
             </div>
@@ -13,10 +13,8 @@
                 </ul>
             </div>
         </div>
-        <div class="wrap">
-
-        </div>
-    </main>
+        <div class=""></div>
+    </div>
 </template>
 
 <script>

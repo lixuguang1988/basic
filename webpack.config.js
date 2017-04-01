@@ -9,7 +9,7 @@ module.exports = {
     app: './src/main.js',
     // app: ['promise-polyfill', './src/main.js'],
     vendor: [
-        'promise-polyfill',
+        'es6-promise/auto',
         'vue',
         'vue-router',
         'vuex',

@@ -13,6 +13,10 @@ npm run dev
 
 # build for production with minification
 npm run build
+
+# clean dist 
+npm run clean
+
 ```
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
@@ -60,4 +64,31 @@ npm install promise-polyfill
 <![if IE]> 
     <script src="/polyfill/promise.min.js"></script>
 <![endif]> 
+```
+
+``` bash
+# 安装 es6-promise
+npm install es6-promise
+
+# main.js文件引入 
+import 'es6-promise/auto'
+
+# webpack.config.js 配置
+```
+``` javascript
+
+  entry: {
+    app: './src/main.js',
+    // app: ['promise-polyfill', './src/main.js'],
+    vendor: [
+        'es6-promise/auto',
+        ...
+    ]
+  },
+
+    module: {
+        // noParse: /promise-polyfill\.js$/, // avoid webpack shimming process
+        noParse: /es6-promise\.js$/, // avoid webpack shimming process
+        ...
+    }
 ```
