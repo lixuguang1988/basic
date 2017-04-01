@@ -1,0 +1,332 @@
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body{
+    background: #f5f5f5;
+    font-family: "Helvetica Neue", "Helvetica", "microsoft yahei", "Hiragino Sans GB", "simsun", arial, "sans-serif";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #333;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+
+.character{font-family:"Georgia", "Apple Symbols", serif;}
+.clear{clear:both;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;*zoom:1;}
+.clearfix{zoom:1;}
+* html .clearfix{height:1%;}
+::-ms-clear, ::-ms-reveal{display: none;}
+.pull-left{float:left;display:inline;}
+.pull-right{float:right;display:inline;}
+.text-left{text-align: left}
+.text-center{text-align:center}
+.text-right{text-align: right}
+.visible-hide{visibility: hidden}
+
+
+a{text-decoration:none;  color: #42b983;}
+img, input, textarea, select{vertical-align:middle;}
+select{*vertical-align:top}
+ul, li, ol, dl, dt, dd{margin:0;padding:0;list-style:none;}
+form{*display:inline;}
+
+
+
+h1, h2 {
+  font-weight: normal;
+}
+
+.wrap{
+    max-width: 960px;
+    margin: 0 auto;
+    /*padding: 1px 0;  child margin*/
+    /*background: #fff;*/
+}
+
+.margin-top{
+    margin-top: 20px;
+}
+
+
+
+
+
+.header{
+  line-height: 56px;
+  background: #42b983;
+  margin: 0;
+  height: 56px;
+  color: #f5f5f5;
+}
+.header-inner{
+    max-width: 960px;
+    margin: 0 auto;
+}
+.header-nav li {
+  float: left;
+}
+
+.header-nav a{
+  color: #fff;
+  opacity: .8;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  width: 100px;
+}
+
+.header-nav .router-link-active{
+    opacity: 1;
+    background: #55ca95;
+}
+
+.header-user a{
+    color: #fff;
+    margin: 0 10px;
+}
+
+.news-list{
+    position: relative;
+    padding: 10px 20px 30px;
+    font-size: 14px;
+    background: #fff;
+    transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.news-list li{
+    position: relative;
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+}
+
+.news-list .item-hd{
+    margin-bottom: 10px;
+}
+.news-list .item-hd-title{
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+.view{
+    position: relative;
+}
+
+.fade-enter-active, .fade-leave-active{
+    transition: all .2s ease
+} 
+.fade-enter, .fade-leave-active{
+    opacity: 0
+}
+  
+.slide-left-enter, .slide-right-leave-active{
+  opacity: 0;
+  transform: translate(30px, 0)
+}
+.slide-left-leave-active, .slide-right-enter{
+  opacity: 0;
+  transform: translate(-30px, 0)
+}
+  
+
+.item-move, .item-enter-active, .item-leave-active{
+  transition: all .5s cubic-bezier(.55,0,.1,1)
+}
+.item-enter{
+  opacity: 0;
+  transform: translate(30px, 0)
+}
+.item-leave-active{
+  position: absolute;
+  opacity: 0;
+  transform: translate(30px, 0);
+}
+
+
+
+
+.common-navigator{
+    line-height: 26px;
+    margin-bottom: 20px;
+    padding: 20px;
+    font-size: 12px;
+    text-align: center;
+    background: #fff;
+}
+.common-navigator a{
+    text-decoration: none;
+    margin:0 20px;
+}
+.common-navigator .disabled{
+    color: #999;
+}
+
+
+.article{
+    position: relative;
+    margin:0 auto 20px ;
+    background: #FFF;
+    transition: all 1s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.article-head{
+    font-size: 28px;
+    padding: 20px 0;
+    text-align: center;
+}
+.article-info{
+    color: #999;
+    text-align: center;
+}
+.article-type-shi{
+    text-align: center;
+}
+
+.article-translate, .article-expert-review{
+    padding: 20px;
+    /*border-top: 20px solid #f5f5f5;*/
+}
+
+.article-review-item{
+    margin: 16px 0;
+}
+ .article-content{
+    padding: 20px;
+    line-height: 32px;
+}
+.article-links{
+    text-align: center;
+    padding: 30px 0;
+}
+.article-links a{
+    margin: 0 20px;
+}
+
+/*作者简介*/
+.author{
+    padding: 30px 0;
+}
+.author-head{
+    font-size: 28px;
+}
+.author-info{
+    width: 60%;
+}
+.author-review-item li{
+    display: inline-block;
+    width: 33%;
+}
+
+
+.wrap > .content{
+    padding: 20px;
+    background: #fff;
+}
+
+/*.form-group{
+    margin: 20px 0;
+}
+.control-label, .form-control{
+    display: block;
+}
+.form-inline .control-label{
+    display: inline-block;
+    width: 160px;
+    padding-right: 10px;
+    text-align: right;
+}
+.form-control{
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    width: 100%;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.form-control:focus{
+    border-color:#66afe9;
+    outline:0;
+    -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+.form-inline  .form-control{
+    display: inline-block;
+}
+*/
+textarea.form-control-text{
+    height: 100px;
+}
+
+/*.field-btn{
+    width: 120px;
+    height: 35px;
+    color: #fff;
+    background: #42b983;
+    border: none;
+    cursor: pointer;
+}*/
+
+.form-mini{
+    width: 360px;
+    margin: 0 auto;
+    padding:1px 20px 50px
+}
+
+
+/*.field-hd{
+}*/
+
+
+.info-box{
+    margin: 20px;
+    padding: 10px;
+    color: #fff;
+    border-radius: 3px;
+}
+.info-warn{
+    background-color: #ec971f;
+    border-color: #d58512;
+}
+
+
+
+
+.action-success{
+    padding: 15px;
+    margin: 20px;
+}
+
+.user-bar{
+    margin: 60px 0 20px;
+    padding: 0 20px;
+    background: #fff;
+}
+.user-bar-avatar img{
+    width: 80px;
+    height: 80px;
+    margin-top: -30px;
+}
+.user-bar-main{
+    margin-left: 120px;
+}
+.user-bar-name{
+    margin: -30px 0 0;
+    line-height: 30px;
+}
+.user-bar-menu li{
+    float: left;
+    margin-right: 40px;
+}
+.user-bar-menu li a{
+    display: block;
+    line-height: 50px;
+}
+.user-bar-menu .active a{
+    border-bottom: 3px solid #42b983;
+}
+.user-bar-menu li a:hover, .header-nav li a:hover{
+    text-decoration: none;
+}
